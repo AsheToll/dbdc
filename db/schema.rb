@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_29_203443) do
+ActiveRecord::Schema.define(version: 2019_07_29_210903) do
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2019_07_29_203443) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "divebar_id"
+    t.integer "dive_bar_id"
     t.integer "rating"
     t.text "review"
     t.datetime "created_at", null: false

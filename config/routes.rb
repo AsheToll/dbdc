@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :dive_bars, only: [:index, :show]
   resources :neighborhoods, only: [:index, :show]
   resources :bands, only: [:index, :show]
+  resources :reviews, only: [:new, :create]
 end

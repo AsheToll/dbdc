@@ -1,7 +1,19 @@
 <h1><%= @dive_bar.name %></h1>
 <h3><%= @dive_bar.description %></h3>
-<p><%= link_to @dive_bar.neighborhood.name, neighborhood_path(@dive_bar.neighborhood) %>
+<p>Location: <%= link_to @dive_bar.neighborhood.name, neighborhood_path(@dive_bar.neighborhood) %>
  
- <h1>BANDZ</h1>
- <h1>REVIEWZ</h1>
+ <h3>Bands: </h3>
+ <% @dive_bar.bands.each do |band|%>
+    <%= link_to band.name, band_path(band) %>
+<% end %>
+
+ <h3>Reviews:</h3>
+ <ul>
+ <% @dive_bar.reviews.each do |r| %>
+   <li> <%= r.review %> <br>
+   Review By: <%= r.user.name %> </li>
+    <%end%>
+    </ul>
  <h1>BUTTONSZ</h1>
+
+ <%= link_to "Leave a Review", new_review_path %>

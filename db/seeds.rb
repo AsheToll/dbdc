@@ -37,3 +37,6 @@ jackpot = DiveBar.create(name: "Jackpot", description: "Lorem Ipsum Text Going H
 rocket_bar = DiveBar.create(name: "Rocket Bar", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id) # Chinatown
 
 deeznuts = BarBand.create(dive_bar_id: dans.id, band_id: three.id)
+
+rev1 = Review.create(user_id: sam.id, dive_bar_id: dans.id, rating: 5, review: "This place had a terrible band but I really like my margarita!")
+rev2 = Review.create(user_id: ashley.id, dive_bar_id: dewdrop.id, rating: 9, review: "Great place! Great deals! My friends and I love hanging out here!")

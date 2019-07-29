@@ -1,0 +1,13 @@
+<h1>Write a Review</h1>
+
+<%= form_for @review do |f| %>
+    <%= f.label :dive_bar_id %>
+    <%= f.collection_select(:dive_bar_id, DiveBar.all, :id, :name) %>
+    <%= f.label :user_id %>
+    <%= f.collection_select(:user_id, User.all, :id, :name) %>
+    <%= f.label :rating %>
+    <%= f.select :rating, (1..10) %>
+    <%= f.label :review %>
+    <%= f.text_field :review %>
+    <%= f.submit %>
+    <%end%>
