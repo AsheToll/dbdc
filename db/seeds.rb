@@ -11,8 +11,6 @@
 # Band.destroy_all
 # DiveBar.destroy_all
 
-
-
 adams = Neighborhood.create(name: "Adams Morgan")
 dupont = Neighborhood.create(name: "Dupont Cirle")
 foggy = Neighborhood.create(name: "Foggy Bottom")
@@ -37,3 +35,5 @@ dewdrop = DiveBar.create(name: "Dew Drop Inn", description: "Lorem Ipsum Text Go
 jimmys = DiveBar.create(name: "Jimmy Valentine's Lonely Hearts Club", description: "Lorem Ipsum Text Going Here!", neighborhood_id: brookland.id) # Brookland
 jackpot = DiveBar.create(name: "Jackpot", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id) # Chinatown
 rocket_bar = DiveBar.create(name: "Rocket Bar", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id) # Chinatown
+
+deeznuts = BarBand.create(dive_bar_id: dans.id, band_id: three.id)

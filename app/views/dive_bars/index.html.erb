@@ -1,0 +1,7 @@
+<h1>Dive Bars</h1>
+
+<ul>
+    <% @dive_bars.each do |db| %>
+        <li><%= link_to db.name, dive_bar_path(db) %></li>
+    <% end %>
+</ul>

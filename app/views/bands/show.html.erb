@@ -1,0 +1,9 @@
+<h1><%= @band.name %></h1>
+
+<h3>Genre: <%= @band.genre %></h3>
+
+<h1>BARSZ WE GONNA PLAY AT</h1>
+
+<% @band.dive_bars.each do |bar|%>
+    <%= link_to bar.name, dive_bar_path(bar) %>
+<% end %>
