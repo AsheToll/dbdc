@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   resources :neighborhoods, only: [:index, :show]
   resources :bands, only: [:index, :show]
   resources :reviews, only: [:new, :create]
+
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  get "/logout", to: "sessions#logout"
 end

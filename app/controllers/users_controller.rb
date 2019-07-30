@@ -13,6 +13,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.valid?
             @user.save
+            cookies[:user_id] = @user.id
             redirect_to @user
         else
             render :new
@@ -37,6 +38,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:name, :username, :fav_genre, :neighborhood)
+        params.require(:user).permit(:name, :username, :fav_genre, :neighborhood, :password)
     end
 end
