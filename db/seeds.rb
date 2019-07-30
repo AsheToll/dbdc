@@ -6,18 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Neighborhood.destroy_all
-# User.destroy_all
-# Band.destroy_all
-# DiveBar.destroy_all
+Neighborhood.destroy_all
+User.destroy_all
+Band.destroy_all
+DiveBar.destroy_all
 
 adams = Neighborhood.create(name: "Adams Morgan")
-dupont = Neighborhood.create(name: "Dupont Cirle")
+dupont = Neighborhood.create(name: "Dupont Circle")
 foggy = Neighborhood.create(name: "Foggy Bottom")
 brookland = Neighborhood.create(name: "Brookland")
 chinatown = Neighborhood.create(name: "Chinatown")
 
-sam = User.create(name: "Sam Kane", username: "Sak", fav_genre: "Pop", neighborhood: "Dupont Cirle")
+sam = User.create(name: "Sam Kane", username: "Sak", fav_genre: "Pop", neighborhood: "Dupont Circle")
 ashley = User.create(name: "Ashley Tolen", username: "AshT", fav_genre: "Classic Rock", neighborhood: "Brookland")
 
 funky = Band.create(name: "Funky Hunks", genre: "Funk")

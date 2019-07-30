@@ -1,8 +1,22 @@
-<h1><%=@user.name%>
-<div>Neighborhood: <%=@user.neighborhood%></div>
-<div> Favorite Music Genre: <%=@user.fav_genre%></div>
-<div>Bars Visited: </div>
-<div>Bars I want to visit: </div>
+<h1><%=@user.name%> </h1><br> <br>
+<div>Neighborhood: <%=  @user.neighborhood%></div> <br>
+<div> Favorite Music Genre: <%=@user.fav_genre%></div> <br>
+<div>Bars Visited:   
+    <% @user.reviews.each do |r| %>
+        <%= r.dive_bar.name %> - 
+    <%end%>
+</div>
+<br>
+
+ <div>Bars I want to visit: </div>
+
+<div>Reviews Made: </div>
+    <ul>
+        <% @user.reviews.each do |r| %>
+            <li>Bar: <%= link_to r.dive_bar.name, dive_bar_path(r.dive_bar) %> <br> 
+             Review: <%= r.review %> </li>
+        <%end%>
+    </ul>
 
 
 <%= link_to "Edit", edit_user_path(@user)%>

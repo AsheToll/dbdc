@@ -2,8 +2,9 @@
 
 <h3>Genre: <%= @band.genre %></h3>
 
-<h1>BARSZ WE GONNA PLAY AT</h1>
-
+<h3>Bars We Play At:</h3>
+<ul>
 <% @band.dive_bars.each do |bar|%>
-    <%= link_to bar.name, dive_bar_path(bar) %>
+    <li><%= link_to bar.name, dive_bar_path(bar) %></li>
 <% end %>
+</ul>
