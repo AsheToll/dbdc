@@ -1,7 +1,16 @@
 <h1><%= @dive_bar.name %></h1>
 <h3><%= @dive_bar.description %></h3>
-<p>Location: <%= link_to @dive_bar.neighborhood.name, neighborhood_path(@dive_bar.neighborhood) %>
+
+<h3>Average Rating:</h3>
+<% rating = @dive_bar.reviews.map do |review| %>
+   <% review.rating %>
+<% end %>
+
+<%= average = rating.sum / rating.size.to_f %> /10 stars
+
+<h3>Location: </h3> <%= link_to @dive_bar.neighborhood.name, neighborhood_path(@dive_bar.neighborhood) %>
  
+
  <h3>Bands: </h3>
  <% @dive_bar.bands.each do |band|%>
     <%= link_to band.name, band_path(band) %>
@@ -11,9 +20,9 @@
  <ul>
  <% @dive_bar.reviews.each do |r| %>
    <li> <%= r.review %> <br>
+    <%= r.rating %> /10 stars <br>
    Review By: <%= r.user.name %> </li>
     <%end%>
     </ul>
- <h1>BUTTONSZ</h1>
 
  <%= link_to "Leave a Review", new_review_path %>

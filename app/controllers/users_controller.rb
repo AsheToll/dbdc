@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    
+
     before_action :find_user, only: [:show, :edit, :update, :destroy]
 
     def show
@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
     def new
         @user = User.new
+        render :layout => "login_layout"
     end
 
     def create
@@ -38,6 +39,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:name, :username, :fav_genre, :neighborhood, :password)
+        params.require(:user).permit(:name, :username, :fav_genre, :neighborhood_id, :password)
     end
 end

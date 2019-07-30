@@ -1,5 +1,5 @@
-<%= @neighborhood.name %>
-
+<h1><%= @neighborhood.name %></h1>
+<h3>Bars:</h3>
 <ul>
     <% @neighborhood.dive_bars.each do |bars| %>
         <li><%= link_to bars.name, dive_bar_path(bars) %></li>

@@ -14,6 +14,6 @@
     <%= f.label "Favorite Genre" %>
     <%= f.text_field :fav_genre %>
     <%= f.label :neighborhood %>
-    <%= f.collection_select :neighborhood, Neighborhood.all, :name, :name %>
+    <%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name %>
     <%= f.submit %>
 <%end%>

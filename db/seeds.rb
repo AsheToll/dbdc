@@ -17,8 +17,8 @@ foggy = Neighborhood.create(name: "Foggy Bottom")
 brookland = Neighborhood.create(name: "Brookland")
 chinatown = Neighborhood.create(name: "Chinatown")
 
-sam = User.create(name: "Sam Kane", username: "Sak", fav_genre: "Pop", neighborhood: "Dupont Circle")
-ashley = User.create(name: "Ashley Tolen", username: "AshT", fav_genre: "Classic Rock", neighborhood: "Brookland")
+sam = User.create(name: "Sam Kane", username: "Sak", fav_genre: "Pop", neighborhood_id: dupont.id)
+ashley = User.create(name: "Ashley Tolen", username: "AshT", fav_genre: "Classic Rock", neighborhood_id: brookland.id)
 
 funky = Band.create(name: "Funky Hunks", genre: "Funk")
 cocoverde = Band.create( name: "Coco Verde", genre: "Classic Rock")
