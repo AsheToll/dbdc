@@ -1,4 +1,7 @@
 class NeighborhoodsController < ApplicationController
+
+    before_action :authorized
+    
     def index
         @neighborhoods = Neighborhood.all
     end
