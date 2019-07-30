@@ -1,19 +1,21 @@
 <% if @user.errors.any? %>
+<ul>
     <% @user.errors.full_messages.each do |m| %>
-        <%= m %>
+       <li> <%= m %> </li>
     <%end%>
+    </ul>
 <%end%>
 
 <%= form_for @user do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name %> <br>
     <%= f.label :username %>
-    <%= f.text_field :username %>
+    <%= f.text_field :username %> <br>
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password %> <br>
     <%= f.label "Favorite Genre" %>
-    <%= f.text_field :fav_genre %>
+    <%= f.text_field :fav_genre %> <br>
     <%= f.label :neighborhood %>
-    <%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name %>
+    <%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name %> <br>
     <%= f.submit %>
 <%end%>

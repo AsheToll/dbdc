@@ -2,8 +2,12 @@
 <div>Neighborhood: <%=  link_to @user.neighborhood.name, neighborhood_path(@user.neighborhood_id)%></div> <br>
 <div> Favorite Music Genre: <%=@user.fav_genre%></div> <br>
 <div>Bars Visited:   
-    <% @user.reviews.each do |r| %>
-        <%= r.dive_bar.name %> - 
+    <%if @user.reviews == [] %>
+        <div> No Bars Visited </div>
+    <%else%>
+        <% @user.reviews.each do |r| %>
+            <%= r.dive_bar.name %> - 
+        <%end%>
     <%end%>
 </div>
 <br>
@@ -11,12 +15,17 @@
  <div>Bars I want to visit: </div>
 
 <div>Reviews Made: </div>
+<% if @user.reviews == []%>
+  <div>No Reviews Made</div>
+ <%else%>
     <ul>
         <% @user.reviews.each do |r| %>
             <li>Bar: <%= link_to r.dive_bar.name, dive_bar_path(r.dive_bar) %> <br> 
              Review: <%= r.review %> </li>
         <%end%>
     </ul>
+<%end%>
 
 
 <%= link_to "Edit", edit_user_path(@user)%>
+<%= link_to "Delete User", login_path, "method" => :delete %>

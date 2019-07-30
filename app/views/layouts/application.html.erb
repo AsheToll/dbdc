@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <%= link_to "My Home Page", user_path(session[:user_id]) %>
     <%= link_to "Bars", dive_bars_path %>
     <%= link_to "Bands", bands_path %>
     <%= link_to "Neighborhoods", neighborhoods_path %>

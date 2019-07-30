@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 
     before_action :find_user, only: [:show, :edit, :update, :destroy]
 
+    def index
+        @users = User.all
+    end
+
     def show
     end
 
@@ -14,10 +18,10 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.valid?
             @user.save
-            cookies[:user_id] = @user.id
+            session[:user_id] = @user.id
             redirect_to @user
         else
-            render :new
+            render :new, :layout => "login_layout"
         end
     end
 
@@ -30,12 +34,15 @@ class UsersController < ApplicationController
     end
 
     def destroy
+        @user.destroy
+        session.delete(:user_id)
+        redirect_to login_path
     end
 
     private
 
     def find_user
-        @user = User.find(params[:id])
+        @user = User.find(session[:user_id])
     end
 
     def user_params
