@@ -10,6 +10,8 @@ Neighborhood.destroy_all
 User.destroy_all
 Band.destroy_all
 DiveBar.destroy_all
+Review.destroy_all
+BarBand.destroy_all
 
 adams = Neighborhood.create(name: "Adams Morgan")
 dupont = Neighborhood.create(name: "Dupont Circle")
@@ -17,8 +19,8 @@ foggy = Neighborhood.create(name: "Foggy Bottom")
 brookland = Neighborhood.create(name: "Brookland")
 chinatown = Neighborhood.create(name: "Chinatown")
 
-sam = User.create(name: "Sam Kane", username: "Sak", fav_genre: "Pop", neighborhood_id: dupont.id)
-ashley = User.create(name: "Ashley Tolen", username: "AshT", fav_genre: "Classic Rock", neighborhood_id: brookland.id)
+sam = User.create(name: "Sam Kane", username: "Sak", fav_genre: "Pop", neighborhood_id: dupont.id, password: "sam")
+ashley = User.create(name: "Ashley Tolen", username: "AshT", fav_genre: "Classic Rock", neighborhood_id: brookland.id, password: "ash")
 
 funky = Band.create(name: "Funky Hunks", genre: "Funk")
 cocoverde = Band.create( name: "Coco Verde", genre: "Classic Rock")

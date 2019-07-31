@@ -2,7 +2,7 @@ class User < ApplicationRecord
     has_secure_password
     belongs_to :neighborhood
     has_many :reviews
-    has_many :dive_bars, through: :reviews
+    has_many :dive_bars, through: :reviews, dependent: :destroy
     validates :username, uniqueness: true
     validates :username, :uniqueness => {:case_sensitive => false}
     validates :name, presence: true

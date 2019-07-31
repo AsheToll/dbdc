@@ -7,7 +7,6 @@ class ReviewsController < ApplicationController
     end
     
     def create
-        @user = User.find_by(name: params[:name])
         @review = Review.create(review_params)
         redirect_to dive_bar_path(@review.dive_bar)
     end
