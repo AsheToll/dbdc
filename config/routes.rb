@@ -6,11 +6,16 @@ Rails.application.routes.draw do
   resources :bands, only: [:index, :show]
   resources :reviews, only: [:new, :create]
 
+  # Sessions
   root "sessions#new"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   get "/logout", to: "sessions#logout"
   delete "/login", to: "users#destroy"
+
+  # Reviews
   get "/dive_bars/:dive_bar_id/reviews/new", to: "reviews#new", as: "bar_review"  
   post "/dive_bars/:dive_bar_id/reviews/new", to: "reviews#create"
+  get "/dive_bars/:dive_bar_id/reviews/new_fav", to: "reviews#new_fav", as: "favorite"
+  post "/dive_bars/:dive_bar_id/reviews/new_fav", to: "reviews#create_fav"
 end
