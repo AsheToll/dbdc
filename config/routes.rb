@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get "/logout", to: "sessions#logout"
   delete "/login", to: "users#destroy"
-
-  
+  get "/dive_bars/:dive_bar_id/reviews/new", to: "reviews#new", as: "bar_review"  
+  post "/dive_bars/:dive_bar_id/reviews/new", to: "reviews#create"
 end
