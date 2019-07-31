@@ -12,6 +12,8 @@ Band.destroy_all
 DiveBar.destroy_all
 Review.destroy_all
 BarBand.destroy_all
+Favorite.destroy_all
+
 
 adams = Neighborhood.create(name: "Adams Morgan")
 dupont = Neighborhood.create(name: "Dupont Circle")
@@ -42,3 +44,6 @@ deeznuts = BarBand.create(dive_bar_id: dans.id, band_id: three.id)
 
 rev1 = Review.create(user_id: sam.id, dive_bar_id: dans.id, rating: 5, review: "This place had a terrible band but I really like my margarita!")
 rev2 = Review.create(user_id: ashley.id, dive_bar_id: dewdrop.id, rating: 9, review: "Great place! Great deals! My friends and I love hanging out here!")
+
+
+fav1 = Favorite.create(user_id: sam.id, dive_bar_id: dans.id)

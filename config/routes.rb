@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :neighborhoods, only: [:index, :show]
   resources :bands, only: [:index, :show]
   resources :reviews, only: [:new, :create]
+  resources :favorites, only: [:create]
 
   # Sessions
   root "sessions#new"
@@ -16,6 +17,5 @@ Rails.application.routes.draw do
   # Reviews
   get "/dive_bars/:dive_bar_id/reviews/new", to: "reviews#new", as: "bar_review"  
   post "/dive_bars/:dive_bar_id/reviews/new", to: "reviews#create"
-  get "/dive_bars/:dive_bar_id/reviews/new_fav", to: "reviews#new_fav", as: "favorite"
-  post "/dive_bars/:dive_bar_id/reviews/new_fav", to: "reviews#create_fav"
+ 
 end

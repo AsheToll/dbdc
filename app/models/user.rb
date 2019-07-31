@@ -3,6 +3,8 @@ class User < ApplicationRecord
     belongs_to :neighborhood
     has_many :reviews
     has_many :dive_bars, through: :reviews, dependent: :destroy
+    has_many :favorites
+    has_many :dive_bars, through: :favorites, dependent: :destroy
     validates :username, uniqueness: true
     validates :username, :uniqueness => {:case_sensitive => false}
     validates :name, presence: true
