@@ -9,5 +9,14 @@
 <ul>
     <% @dive_bars.each do |db| %>
         <li><%= link_to db.name, dive_bar_path(db) %></li>
+       Located in <%= db.neighborhood.name.titleize %>
+        <% rating = db.reviews.map do |review| %>
+            <% review.rating %>
+         <% end %>
+         <div>Average Rating: <%= average = rating.sum / rating.size.to_f %> /10 Stars</div><br>
     <% end %>
 </ul>
+
+
+
+

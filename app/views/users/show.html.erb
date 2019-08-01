@@ -1,5 +1,5 @@
 <h1><%=@user.name%> </h1><br> <br>
-<div>Neighborhood: <%=  link_to @user.neighborhood.name, neighborhood_path(@user.neighborhood_id)%></div> <br>
+<div>Neighborhood: <%=  link_to @user.neighborhood.name.titleize, neighborhood_path(@user.neighborhood_id)%></div> <br>
 <div> Favorite Music Genre: <%=@user.fav_genre%></div> <br>
 
 <br>

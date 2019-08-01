@@ -9,7 +9,7 @@ class DiveBar < ApplicationRecord
 
     def DiveBar.search(q)
         if q
-            neighborhood = Neighborhood.find_by(name: q)
+            neighborhood = Neighborhood.find_by(name: q.downcase)
                 if neighborhood
                     self.where(neighborhood_id: neighborhood)
                 else
