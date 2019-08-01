@@ -3,6 +3,17 @@
 <div> Favorite Music Genre: <%=@user.fav_genre%></div> <br>
 
 <br>
+<div>My Favorite Bars: </div>
+    <% if @user.favorites == [] %>
+        <p> </p>
+    <%else %>
+        <ul>
+            <% @user.favorites.each do |f| %>
+                <li> <%= link_to f.dive_bar.name, dive_bar_path(f.dive_bar) %> </li><br>
+            <%end%>
+        </ul>
+    <%end%>
+<br>
 
 <div>Reviews Made: </div>
 

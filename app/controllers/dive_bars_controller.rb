@@ -8,6 +8,7 @@ class DiveBarsController < ApplicationController
 
     def show
         @dive_bar = DiveBar.find(params[:id])
+        @favorite = (current_user.favorites.find_by(dive_bar_id: @dive_bar.id))
     end
 
 
