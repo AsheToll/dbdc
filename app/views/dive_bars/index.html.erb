@@ -1,5 +1,11 @@
 <h1>Dive Bars</h1>
 
+<%= form_tag(dive_bars_path, method: "get") do %>
+    <%= label_tag(:q, "Search By Neighborhood") %>
+    <%= text_field_tag(:q, params[:q]) %>
+    <%= submit_tag("Search") %>
+<% end %>
+
 <ul>
     <% @dive_bars.each do |db| %>
         <li><%= link_to db.name, dive_bar_path(db) %></li>

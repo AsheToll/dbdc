@@ -3,7 +3,7 @@ class DiveBarsController < ApplicationController
     before_action :authorized
     
     def index
-        @dive_bars = DiveBar.all
+        @dive_bars = DiveBar.search(params[:q])
     end
 
     def show
