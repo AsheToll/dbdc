@@ -37,15 +37,19 @@ haven't seen us yet you are really missing out.  Between our own music and playi
 Be sure to check our schedule reguarly!  ROCK ON AND ROCK OUT! ")
 
 
-dans = DiveBar.create(name: "dan's cafe", description: "Lorem Ipsum Text Going Here!", neighborhood_id: adams.id, picture: "http://gallivant.com/p/2013/04/dans-cafe-1.jpg") # Adams Morgan
-bedrock = DiveBar.create(name: "bedrock billiards", description: "Lorem Ipsum Text Going Here!", neighborhood_id: adams.id, picture:"https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/a53f60b6aaa746bba31fcdf7a3a200cf.jpg") # AdMo
-big_hunt = DiveBar.create(name: "the big hunt", description: "Lorem Ipsum Text Going Here!", neighborhood_id: dupont.id, picture:"https://s3-media3.fl.yelpcdn.com/bphoto/CuCTGWRgC1wzTY-NHRsChg/180s.jpg") # Dupont Circle
-fox_hounds = DiveBar.create(name: "the fox and hounds lounge", description: "Lorem Ipsum Text Going Here!", neighborhood_id: dupont.id, picture:"https://foxandhoundslounge.com/wp-content/uploads/2016/07/o-370x232.jpg") # Dupont
-bottom = DiveBar.create(name: "the bottom line", description: "Lorem Ipsum Text Going Here!", neighborhood_id: foggy.id, picture:"https://media-cdn.tripadvisor.com/media/photo-s/08/cc/6f/32/bottom-line-saloon.jpg") # Foggy Bottom
-recessions = DiveBar.create(name: "recessions", description: "Lorem Ipsum Text Going Here!", neighborhood_id: foggy.id, picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzjBnybZ8X3TPKjEfydA5V1_fFi_vWOAh9n70cYK8mjVK2poZz") # Foggy
-dewdrop = DiveBar.create(name: "dew drop inn", description: "Lorem Ipsum Text Going Here!", neighborhood_id: brookland.id, picture:"https://s3-media4.fl.yelpcdn.com/bphoto/YJi3YcVL-UP6Dv82RCdLGw/ls.jpg") # Brookland
-jackpot = DiveBar.create(name: "jackpot", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id, picture:"https://assets3.thrillist.com/v1/image/1168155/size/tmg-facebook_social.jpg") # Chinatown
-rocket_bar = DiveBar.create(name: "rocket bar", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id, picture: "http://www.dcclubbing.com/wordpress/wp-content/uploads/2012/05/rocketbar1-600x399.jpg") # Chinatown
+dans = DiveBar.create(name: "dan's cafe", description: "Patrons mix their own drinks using squeeze bottles of booze & mixers at this cash-only dive bar.",
+ neighborhood_id: adams.id, picture: "http://gallivant.com/p/2013/04/dans-cafe-1.jpg") # Adams Morgan
+bedrock = DiveBar.create(name: "bedrock billiards", description: "Retro-mod pool hall that also offers foosball & darts, craft beers & works by local artists.",
+ neighborhood_id: adams.id, picture:"https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/a53f60b6aaa746bba31fcdf7a3a200cf.jpg") # AdMo
+big_hunt = DiveBar.create(name: "the big hunt", description: "Funky, low-key, 3-story bar with dozens of beers on tap & a menu of burgers, pizzas & pub snacks.",
+ neighborhood_id: dupont.id, picture:"https://s3-media3.fl.yelpcdn.com/bphoto/CuCTGWRgC1wzTY-NHRsChg/180s.jpg") # Dupont Circle
+fox_hounds = DiveBar.create(name: "People-watching & drinks are draws to this popular local lounge with a patio.", description: "Lorem Ipsum Text Going Here!", neighborhood_id: dupont.id, picture:"https://foxandhoundslounge.com/wp-content/uploads/2016/07/o-370x232.jpg") # Dupont
+bottom = DiveBar.create(name: "the bottom line", description: " Funky basement bar with heated outdoor seating & a menu of American & Mexican pub grub.", neighborhood_id: foggy.id, picture:"https://media-cdn.tripadvisor.com/media/photo-s/08/cc/6f/32/bottom-line-saloon.jpg") # Foggy Bottom
+recessions = DiveBar.create(name: "recessions", description: "Budget bar below ground serves large beers & portions of pub grub, with pool & karaoke too.", neighborhood_id: foggy.id, picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzjBnybZ8X3TPKjEfydA5V1_fFi_vWOAh9n70cYK8mjVK2poZz") # Foggy
+dewdrop = DiveBar.create(name: "dew drop inn", description: "Chill bar with lived-in, retro feel & roof deck serving beers, wines, sandwiches & snacks.", neighborhood_id: brookland.id, picture:"https://s3-media4.fl.yelpcdn.com/bphoto/YJi3YcVL-UP6Dv82RCdLGw/ls.jpg") # Brookland
+jackpot = DiveBar.create(name: "jackpot", description: "No-frills, low-lit subterranean bar with kitschy knickknacks, DC-themed cocktails & whiskey.", 
+    neighborhood_id: chinatown.id, picture:"https://assets3.thrillist.com/v1/image/1168155/size/tmg-facebook_social.jpg") # Chinatown
+rocket_bar = DiveBar.create(name: "rocket bar", description: "Funky bar with billiards, darts, shuffleboard & video games amid rec room decor with a rocket motif.", neighborhood_id: chinatown.id, picture: "http://www.dcclubbing.com/wordpress/wp-content/uploads/2012/05/rocketbar1-600x399.jpg") # Chinatown
 
 play1 = BarBand.create(dive_bar_id: dans.id, band_id: three.id)
 play2 = BarBand.create(dive_bar_id: jackpot.id, band_id: cocoverde.id)
