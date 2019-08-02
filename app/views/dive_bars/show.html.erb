@@ -16,28 +16,28 @@
 
 <div>
    <h3>Average Rating:</h3>
-   <% rating = @dive_bar.reviews.map do |review| %>
+  <% rating = @dive_bar.reviews.map do |review| %>
       <% review.rating %>
-   <% end %>
+   <% end %> 
 
-   <%= average = rating.sum / rating.size.to_f %> /10 stars
+   <p><%= average = rating.sum / rating.size.to_f %> /10 stars</p>
 
-   <h3>Location: </h3> <%= link_to @dive_bar.neighborhood.name.titleize, neighborhood_path(@dive_bar.neighborhood) %>
+   <h3>Location: </h3> <p><%= link_to @dive_bar.neighborhood.name.titleize, neighborhood_path(@dive_bar.neighborhood) %></p>
    
 
    <h3>Bands: </h3>
    <ul>
    <% @dive_bar.bands.each do |band|%>
-      <li><%= link_to band.name, band_path(band) %></li>
+      <li><p><%= link_to band.name, band_path(band) %></p></li>
    <% end %>
    </ul>
 
    <h3>Reviews:</h3>
    <ul>
       <% @dive_bar.reviews.each do |r| %>
-         <li> <%= r.review %> <br>
+         <li> <p><%= r.review %> <br>
          <%= r.rating %> /10 stars <br>
-         Review By: <%= r.user.name %> </li>
+         Review By: <%= r.user.name %> </p></li>
       <%end%>
    </ul>
 

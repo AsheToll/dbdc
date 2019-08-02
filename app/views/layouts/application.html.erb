@@ -9,7 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+    
+    </head>
 
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,19 +21,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "My Home Page", user_path(session[:user_id]) %>
+        <%= link_to "My Home Page", user_path(session[:user_id]), class: "link_color" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Bars", dive_bars_path %>
+        <%= link_to "Bars", dive_bars_path, class: "link_color" %>
       </li>
       <li class = "nav-item">
-        <%= link_to "Bands", bands_path %>
+        <%= link_to "Bands", bands_path, class: "link_color" %>
       </li>
       <li class = "nav-item">
-        <%= link_to "Neighborhoods", neighborhoods_path %>
+        <%= link_to "Neighborhoods", neighborhoods_path, class: "link_color" %>
       </li>
       <li class = "nav-item">
-        <%= link_to "Logout", logout_path %>
+        <%= link_to "Logout", logout_path, class: "link_color" %>
       </li>
     </ul>
   </div>
