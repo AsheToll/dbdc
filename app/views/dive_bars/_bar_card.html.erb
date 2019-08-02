@@ -1,0 +1,9 @@
+<div class = "grid-item" >
+    <%= image_tag(dive_bar.picture, alt: 'rss feed', height: 250, width: 350) %><br>
+    <%= link_to dive_bar.name.titleize, dive_bar_path(dive_bar) %><br>
+    Located in <%= dive_bar.neighborhood.name.titleize %><br>
+    <% rating = dive_bar.reviews.map do |review| %>
+    <% review.rating %>
+    <% end %>
+    <div>Average Rating: <%= average = rating.sum / rating.size.to_f %> /10 Stars</div><br>
+</div>

@@ -6,17 +6,8 @@
     <%= submit_tag("Search") %>
 <% end %>
 
-<ul>
-    <% @dive_bars.each do |db| %>
-        <li><%= link_to db.name.titleize, dive_bar_path(db) %></li>
-       Located in <%= db.neighborhood.name.titleize %>
-        <% rating = db.reviews.map do |review| %>
-            <% review.rating %>
-         <% end %>
-         <div>Average Rating: <%= average = rating.sum / rating.size.to_f %> /10 Stars</div><br>
+<div class = "grid-container">
+    <% @dive_bars.each do |dive_bar| %>
+        <%= render partial: "bar_card", locals: {dive_bar: dive_bar}%>
     <% end %>
-</ul>
-
-
-
-
+</div>

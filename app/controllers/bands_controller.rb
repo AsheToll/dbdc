@@ -3,7 +3,7 @@ class BandsController < ApplicationController
     before_action :authorized
     
     def index
-        @bands = Band.search(params[:b])
+        @bands = Band.all
     end
 
     def show
