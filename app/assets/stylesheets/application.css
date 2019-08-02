@@ -1,5 +1,18 @@
+/* BODY STYLEZ */
+@import url("https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker&display=swap");
 html, body {
   height: 100%; }
+
+body {
+  background-image: url("app/assets/images/lightning.png");
+  background-repeat: repeat; }
+
+h3, h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: hotpink; }
+
+p {
+  font-family: 'Oswald', sans-serif; }
 
 .grid-container {
   display: grid;
@@ -12,12 +25,37 @@ html, body {
   color: darkslategrey;
   font-family: 'Permanent Marker', cursive; }
 
+<<<<<<< HEAD
 h3, h1, h4, h5 {
   font-family: 'Permanent Marker', cursive;
   color: hotpink; }
+=======
+.login-container {
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  margin-top: 30vh; }
+>>>>>>> f5b85824783926bbe07be84cf8f67653d098303a
 
-p {
-  font-family: "oswald"; }
+/*
+USERS
+*/
+.user-container {
+  margin: 15vh; }
+
+.user_button {
+  border-radius: 6px;
+  background-color: hotpink;
+  padding: 10px;
+  letter-spacing: 1px; }
+
+.user_button a {
+  color: white;
+  font-family: 'Permanent Marker', 'cursive'; }
+
+.user_button a:hover {
+  color: #a9a9a9;
+  text-decoration: none; }
 
 .links, a {
   font-family: 'oswald'; }
