@@ -8,7 +8,7 @@
 
 <ul>
     <% @dive_bars.each do |db| %>
-        <li><%= link_to db.name, dive_bar_path(db) %></li>
+        <li><%= link_to db.name.titleize, dive_bar_path(db) %></li>
        Located in <%= db.neighborhood.name.titleize %>
         <% rating = db.reviews.map do |review| %>
             <% review.rating %>

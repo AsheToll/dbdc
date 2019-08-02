@@ -9,7 +9,7 @@
     <%else %>
         <ul>
             <% @user.favorites.each do |f| %>
-                <li> <%= link_to f.dive_bar.name, dive_bar_path(f.dive_bar) %> </li><br>
+                <li> <%= link_to f.dive_bar.name.titleize, dive_bar_path(f.dive_bar) %> </li><br>
             <%end%>
         </ul>
     <%end%>
@@ -22,7 +22,7 @@
     <%else%>
         <ul>
             <% @user.reviews.each do |r| %>
-                <li> Bar: <%=link_to r.dive_bar.name, dive_bar_path(r.dive_bar) %> <br> 
+                <li> Bar: <%=link_to r.dive_bar.name.titleize, dive_bar_path(r.dive_bar) %> <br> 
                 Review: <%= r.review %> </li>
             <%end%>
         </ul>

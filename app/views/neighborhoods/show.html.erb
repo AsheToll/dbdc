@@ -2,7 +2,7 @@
 <h3>Bars:</h3>
 <ul>
     <% @neighborhood.dive_bars.each do |bars| %>
-        <li><%= link_to bars.name, dive_bar_path(bars) %></li>
+        <li><%= link_to bars.name.titleize, dive_bar_path(bars) %></li>
         <% rating = bars.reviews.map do |review| %>
             <% review.rating %>
          <% end %>

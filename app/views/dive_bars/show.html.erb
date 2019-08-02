@@ -1,5 +1,5 @@
 <div>
-   <h1><%= @dive_bar.name %></h1>
+   <h1><%= @dive_bar.name.titleize%></h1>
    <!-- STYLEZ This should be right next to the h1 -->
 
  <% if !!@favorite %>
@@ -7,8 +7,10 @@
 <%else%>
    <%= button_to "Favorite", favorites_path, params:{dive_bar_id: @dive_bar.id} %>
 <%end%>
+<br>
+<br>
+   <%= image_tag(@dive_bar.picture, alt: 'rss feed', height:300, width:500) %>
 
-   <%= image_tag ("CatsOnTapReaction.png") %>
    <h3><%= @dive_bar.description %></h3>
 </div>
 

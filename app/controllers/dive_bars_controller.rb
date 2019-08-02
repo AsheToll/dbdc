@@ -16,6 +16,6 @@ class DiveBarsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:user_id, :dive_bar_id, :rating, :review)
+        params.require(:review).permit(:user_id, :dive_bar_id, :rating, :review, :picture)
     end
 end

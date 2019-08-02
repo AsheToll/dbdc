@@ -37,16 +37,16 @@ haven't seen us yet you are really missing out.  Between our own music and playi
 Be sure to check our schedule reguarly!  ROCK ON AND ROCK OUT! ")
 
 
-dans = DiveBar.create(name: "Dan's Cafe", description: "Lorem Ipsum Text Going Here!", neighborhood_id: adams.id) # Adams Morgan
-bedrock = DiveBar.create(name: "Bedrock Billiards", description: "Lorem Ipsum Text Going Here!", neighborhood_id: adams.id) # AdMo
-big_hunt = DiveBar.create(name: "The Big Hunt", description: "Lorem Ipsum Text Going Here!", neighborhood_id: dupont.id) # Dupont Circle
-fox_hounds = DiveBar.create(name: "The Fox and Hounds Lounge", description: "Lorem Ipsum Text Going Here!", neighborhood_id: dupont.id) # Dupont
-bottom = DiveBar.create(name: "The Bottom Line", description: "Lorem Ipsum Text Going Here!", neighborhood_id: foggy.id) # Foggy Bottom
-recessions = DiveBar.create(name: "Recessions", description: "Lorem Ipsum Text Going Here!", neighborhood_id: foggy.id) # Foggy
-dewdrop = DiveBar.create(name: "Dew Drop Inn", description: "Lorem Ipsum Text Going Here!", neighborhood_id: brookland.id) # Brookland
-jimmys = DiveBar.create(name: "Jimmy Valentine's Lonely Hearts Club", description: "Lorem Ipsum Text Going Here!", neighborhood_id: brookland.id) # Brookland
-jackpot = DiveBar.create(name: "Jackpot", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id) # Chinatown
-rocket_bar = DiveBar.create(name: "Rocket Bar", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id) # Chinatown
+dans = DiveBar.create(name: "dan's cafe", description: "Lorem Ipsum Text Going Here!", neighborhood_id: adams.id, picture: "http://gallivant.com/p/2013/04/dans-cafe-1.jpg") # Adams Morgan
+bedrock = DiveBar.create(name: "bedrock billiards", description: "Lorem Ipsum Text Going Here!", neighborhood_id: adams.id, picture:"https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/a53f60b6aaa746bba31fcdf7a3a200cf.jpg") # AdMo
+big_hunt = DiveBar.create(name: "the big hunt", description: "Lorem Ipsum Text Going Here!", neighborhood_id: dupont.id, picture:"https://s3-media3.fl.yelpcdn.com/bphoto/CuCTGWRgC1wzTY-NHRsChg/180s.jpg") # Dupont Circle
+fox_hounds = DiveBar.create(name: "the fox and hounds lounge", description: "Lorem Ipsum Text Going Here!", neighborhood_id: dupont.id, picture:"https://foxandhoundslounge.com/wp-content/uploads/2016/07/o-370x232.jpg") # Dupont
+bottom = DiveBar.create(name: "the bottom line", description: "Lorem Ipsum Text Going Here!", neighborhood_id: foggy.id, picture:"https://media-cdn.tripadvisor.com/media/photo-s/08/cc/6f/32/bottom-line-saloon.jpg") # Foggy Bottom
+recessions = DiveBar.create(name: "recessions", description: "Lorem Ipsum Text Going Here!", neighborhood_id: foggy.id, picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzjBnybZ8X3TPKjEfydA5V1_fFi_vWOAh9n70cYK8mjVK2poZz") # Foggy
+dewdrop = DiveBar.create(name: "dew drop inn", description: "Lorem Ipsum Text Going Here!", neighborhood_id: brookland.id, picture:"https://s3-media4.fl.yelpcdn.com/bphoto/YJi3YcVL-UP6Dv82RCdLGw/ls.jpg") # Brookland
+jimmys = DiveBar.create(name: "jimmy valentine's lonely hearts club", description: "Lorem Ipsum Text Going Here!", neighborhood_id: brookland.id, picture: "") # Brookland
+jackpot = DiveBar.create(name: "jackpot", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id, picture:"https://assets3.thrillist.com/v1/image/1168155/size/tmg-facebook_social.jpg") # Chinatown
+rocket_bar = DiveBar.create(name: "rocket bar", description: "Lorem Ipsum Text Going Here!", neighborhood_id: chinatown.id, picture: "http://www.dcclubbing.com/wordpress/wp-content/uploads/2012/05/rocketbar1-600x399.jpg") # Chinatown
 
 play1 = BarBand.create(dive_bar_id: dans.id, band_id: three.id)
 play2 = BarBand.create(dive_bar_id: jackpot.id, band_id: cocoverde.id)
@@ -83,8 +83,8 @@ rev11 = Review.create(user_id: ashley.id, dive_bar_id: jimmys.id, rating: 5, rev
 but the mixed drinks aren't strong at all! Oh well.... ")
 rev12 = Review.create(user_id: rob.id, dive_bar_id: jackpot.id, rating: 9, review: "A hidden gem!  So happy I found this place! It's small and cozy.  Not too loud either!
 good place to take a date and get to know someone!  I just have to find a date first....")
-rev13 = Review.create(user_id: sam.id, dive_bar_id: bottom.id, rating: 6, review: "Band was cool.  Vibe was just ok.  Would return but not going to be 
-a go to spot.  The Bottom Line is a solid spot in Foggy Bottom.  Happy Hour has some good deals.")
+rev13 = Review.create(user_id: sam.id, dive_bar_id: bottom.id, rating: 6, review: "Band was cool.  Vibe was just ok.  The Bottom Line is a solid spot in Foggy Bottom.  Happy Hour has some good deals.  Good deals and good beer 
+are awlays good for me.  The bottom line is that the Bottom Line is a spot.")
 rev14 = Review.create(user_id: luke.id, dive_bar_id: fox_hounds.id, rating: 2, review: "I would usually say that any place with alcohol is fine, but no.  I was not satisfied with their drinks!  The mixed
 drinks were weak and the beer I had was sour!  The Fat Hogs were playing here and they weren't good either!  Man, what a place.  Can't believe I was here.  I do not recommend.  Gave it a 2 instead of a 1 because of the cleanliness of the place")
 
