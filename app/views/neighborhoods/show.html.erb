@@ -1,12 +1,12 @@
-<h1><%= @neighborhood.name.titleize %></h1>
+<h1><%= @neighborhood.name.titleize %></h1><br>
 <h3>Bars:</h3>
 <ul>
     <% @neighborhood.dive_bars.each do |bars| %>
-        <li><%= link_to bars.name.titleize, dive_bar_path(bars) %></li>
+        <li><h4 class= "links"><%= link_to bars.name.titleize, dive_bar_path(bars) %></h4></li>
         <% rating = bars.reviews.map do |review| %>
             <% review.rating %>
          <% end %>
-         <div>Average Rating: <%= average = rating.sum / rating.size.to_f %> /10 Stars</div><br>
+         <p>Average Rating: <%= average = rating.sum / rating.size.to_f %> /10 Stars</p>
     <% end %>
 </ul>
 

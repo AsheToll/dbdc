@@ -7,6 +7,6 @@
 <h3>Bars We Play At:</h3>
 <ul>
 <% @band.dive_bars.each do |bar|%>
-    <li><p><%= link_to bar.name.titleize, dive_bar_path(bar) %></p></li>
+    <li><p class: "links"><%= link_to bar.name.titleize, dive_bar_path(bar) %></p></li>
 <% end %>
 </ul>

@@ -1,33 +1,35 @@
 <h1><%=@user.name%> </h1><br> <br>
-<div>Neighborhood: <%=  link_to @user.neighborhood.name.titleize, neighborhood_path(@user.neighborhood_id)%></div> <br>
-<div> Favorite Music Genre: <%=@user.fav_genre%></div> <br>
-
+<h5>Neighborhood: </h5>
+<p class= "links":><%=  link_to @user.neighborhood.name.titleize, 
+neighborhood_path(@user.neighborhood_id)%></p> 
+<h5> Favorite Music Genre: </h5>
+<p><%=@user.fav_genre%></p> 
 <br>
-<div>My Favorite Bars: </div>
+<h5>My Favorite Bars: </h5>
     <% if @user.favorites == [] %>
         <p> </p>
     <%else %>
         <ul>
             <% @user.favorites.each do |f| %>
-                <li> <%= link_to f.dive_bar.name.titleize, dive_bar_path(f.dive_bar) %> </li><br>
+                <li><p class= "links"> <%= link_to f.dive_bar.name.titleize, dive_bar_path(f.dive_bar), :class => "links" %> </p></li>
             <%end%>
         </ul>
     <%end%>
 <br>
 
-<div>Reviews Made: </div>
+<h5>Reviews Made: </h5> <br>
 
     <% if @user.reviews == []%>
-        <div>No Reviews Made</div>
+        <p>No Reviews Made</p>
     <%else%>
         <ul>
             <% @user.reviews.each do |r| %>
-                <li> Bar: <%=link_to r.dive_bar.name.titleize, dive_bar_path(r.dive_bar) %> <br> 
-                Review: <%= r.review %> </li>
+                <li><p class= "links"> Bar: <%=link_to r.dive_bar.name.titleize, dive_bar_path(r.dive_bar) %></p> <br> 
+                <p>Review: <%= r.review %> <p></li>
             <%end%>
         </ul>
     <%end%>
 <br>
 
-<%= link_to "Edit", edit_user_path(@user)%> <br>
-<%= link_to "Delete User", login_path, "method" => :delete %>
+<p class= "links":><%= link_to "Edit", edit_user_path(@user)%> </p><br>
+<p class= "links":><%= link_to "Delete User", login_path, "method" => :delete %></p>

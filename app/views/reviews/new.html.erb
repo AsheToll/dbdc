@@ -1,4 +1,4 @@
-<h1>Write a Review For <%= @dive_bar.name.titleize %> </h1>
+<h1>Write a Review For <%= @dive_bar.name.titleize %> </h1><br>
 <%= form_for @review do |f| %>
     <%= f.hidden_field :user_id, value: session[:user_id] %>
     <%= f.hidden_field :dive_bar_id, value: @dive_bar.id %>

@@ -3,9 +3,8 @@
 
 <ul>
     <% @bands.each do |band| %>
-        <li><%= link_to band.name, band_path(band) %></li>
-            Genre: <%= band.genre %> 
-            <br>
-            <br>
+        <li><p class= "links"><%= link_to band.name, band_path(band) %></p></li>
+            <p>Genre: <%= band.genre %> </p>
+            
     <% end %>
 </ul>

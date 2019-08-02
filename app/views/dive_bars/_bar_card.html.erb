@@ -1,9 +1,9 @@
 <div class = "grid-item" >
-    <%= image_tag(dive_bar.picture, alt: 'rss feed', height: 250, width: 350) %><br>
-    <%= link_to dive_bar.name.titleize, dive_bar_path(dive_bar) %><br>
-    Located in <%= dive_bar.neighborhood.name.titleize %><br>
+    <%= image_tag(dive_bar.picture, alt: 'rss feed', height: 250, width: 350) %><
+    <h4 class: "links"><%= link_to dive_bar.name.titleize, dive_bar_path(dive_bar) %></h4>
+    <p>Located in <%= dive_bar.neighborhood.name.titleize %></p>
     <% rating = dive_bar.reviews.map do |review| %>
     <% review.rating %>
     <% end %>
-    <div>Average Rating: <%= average = rating.sum / rating.size.to_f %> /10 Stars</div><br>
+    <p>Average Rating: <%= average = rating.sum / rating.size.to_f %> /10 Stars</p><br>
 </div>

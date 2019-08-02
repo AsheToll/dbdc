@@ -1,9 +1,9 @@
 <h1>Dive Bars</h1>
 
 <%= form_tag(dive_bars_path, method: "get") do %>
-    <%= label_tag(:q, "Search By Neighborhood") %>
+   <p> <%= label_tag(:q, "Search By Neighborhood:") %> 
     <%= text_field_tag(:q, params[:q]) %>
-    <%= submit_tag("Search") %>
+    <%= submit_tag("Search") %></p>
 <% end %>
 
 <div class = "grid-container">
